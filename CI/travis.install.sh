@@ -7,3 +7,10 @@ if [ "${TRAVIS_OS_NAME}" = "osx" ]; then
   echo Install on OSX.
   ./CI/travis.osx.install.sh;
 fi
+
+pushd terra
+sudo cp -R . /usr/
+mv include ..
+mv share ..
+mv lib ..
+popd

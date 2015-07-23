@@ -86,6 +86,7 @@ unix:!macx {
     isEmpty( DOCDIR ) DOCDIR = $${DATAROOTDIR}/doc/mudlet
     LIBS += -lpcre \
         -llua5.1 \
+        -lterra \
         -lhunspell \
         -L/usr/local/lib/ \
         -lyajl \
@@ -93,11 +94,12 @@ unix:!macx {
         -lzip \
         -lz
     INCLUDEPATH += /usr/include/lua5.1
+    INCLUDEPATH += /usr/include/terra
     LUA_DEFAULT_DIR = $${DATADIR}/lua
 } else:win32: {
     LIBS += -L"C:\\mudlet5_package" \
         -L"C:\\mingw32\\lib" \
-        -llua51 \
+        -lterra \
         -lpcre \
         -lhunspell \
         -llibzip \
@@ -141,7 +143,7 @@ macx {
     # http://stackoverflow.com/a/16972067
     QT_CONFIG -= no-pkg-config
     CONFIG += link_pkgconfig
-    PKGCONFIG += hunspell lua5.1 yajl libpcre libzip
+    PKGCONFIG += hunspell lua5.1 terra yajl libpcre libzip
     INCLUDEPATH += /usr/local/include
 }
 

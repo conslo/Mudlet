@@ -1,3 +1,4 @@
+sudo: required
 language: cpp
 os:
   - osx
@@ -15,9 +16,4 @@ script:
   - cd ../build
   - if [ -z "${TRAVIS_OS_NAME}" ] || [ "${TRAVIS_OS_NAME}" = "linux" ]; then cmake .. && make -j2; fi
 notifications:
-  webhooks:
-    urls:
-      - https://webhooks.gitter.im/e/4ed233d9013d611a1568
-    on_success: always  # options: [always|never|change] default: always
-    on_failure: always  # options: [always|never|change] default: always
-    on_start: false     # default: false
+  email: false

@@ -1,6 +1,6 @@
 # Mudlet
 
-[![Build Status](https://travis-ci.org/Mudlet/Mudlet.svg?branch=development)](https://travis-ci.org/Mudlet/Mudlet)
+[![Build Status](https://travis-ci.org/conslo/Mudlet.svg?branch=terra)](https://travis-ci.org/Mudlet/Mudlet)
 
 Mudlet is a quality MUD client, designed to take mudding to a new level.
 
